@@ -28,7 +28,7 @@ const iconMap: {[kay:string]: IconType} ={
     <HStack>
     {platforms.map((platform) => <Icon as= {iconMap[platform.slug]}/>)}
   </HStack>
-  )
-}
+  );
+};
 
-export default PlatformIconList
+export default PlatformIconList;

@@ -1,11 +1,13 @@
-import { CanceledError } from "axios";
 import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
+import { CanceledError } from "axios";
+
 
 interface Genre {
     id: number;
     name: string;
 }
+
 
 interface FetchGenresResponse {
     count: number;
@@ -26,8 +28,6 @@ const useGenres = () => {
                 setGenres(res.data.results)
                 setLoading(false);
             })
-
-
             .catch(err => {
 
                 if (err instanceof CanceledError) return;
@@ -41,6 +41,7 @@ const useGenres = () => {
 
     return { genres, error, isLoading }
 
-}
+};
+
 
 export default useGenres;

@@ -11,9 +11,7 @@ const CriticScore = ({score} : Props) => {
     
 
 <Badge colorScheme={color} fontSize='14px' paddingX={2} borderRadius={4}>{score}</Badge>
-  
-    
-  )
+   )
 }
 
 export default CriticScore
