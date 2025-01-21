@@ -26,7 +26,7 @@ const iconMap: {[kay:string]: IconType} ={
 
   return (
     <HStack>
-    {platforms.map((platform) => <Icon as= {iconMap[platform.slug]}/>)}
+    {platforms.map((platform) => <Icon key={platform.id} as= {iconMap[platform.slug]}/>)}
   </HStack>
   );
 };
